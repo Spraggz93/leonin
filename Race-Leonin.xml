@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Leonin</name>
+		<description></description>
+	    <update version="1.0">
+			<file name="race-leonin.xml"/>
+		</update>
+	</info>
+
+  <element name="Leonin" type="Race" source="Homebrew" id="ID_HMBRW_RACE_LEONIN">
+    <description>
+      <h4>Leonin</h4>
+      <p>The Leonin are confident in themselves. They’ve hunted alone for milenia, and should not be looking for help anytime soon. This causes them to have an imperious attitude towards things – you’ve dealt with things alone for your whole life. And you usually deal with them aggressively; fighting with words, fists, or swords took up most of your childhood, and your pridemates trained with you daily. You know the traitorous beings outside of your Pride… But you’ve decided to adventure. These people who surround you are your new pride</p> 
+      <span class="feature">Ability Score Increase.</span>Your Constitution increases by 2, and Strength score increases by 1.<br/>
+      <span class="feature">Age.</span>Leonin reach maturity around the age of 15 and live for about 200 years.<br/>
+	  <span class="feature">Alignment</span>The Leonin mostly tend towards more chaotic alignments, but are rarely ever evil.<br/>
+      <span class="feature">Size.</span>Leonin stand at about six to seven feet tall, but usually somewhere in the middle. They have thick, Strong build, but can utilise quick fast paced movements. Average weight between 200 to 300 pounds <br/>
+      <span class="feature">Speed.</span>Your base walking speed is 35 feet.<br/>
+      <span class="feature">Darkvision.</span>Leonin are adapted for living and flying at twilight hours. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.<br/>
+      <span class="feature">Claws.</span>You have a set claws valuable to your fighting when your weapons are uot of reach or looking for a surprise attack. Takes 1 turn to draw weapon after use.<br/>
+      <span class="feature">Hunter's Instincts.</span>You have proficiency in one of the following skills of your choice: Athletics, Intimidation, Perception, or Survival.<br/>
+      <span class="feature">Dauting Roar.</span>A fun but situational effect, Daunting Roar lets you give a menacing roar that frightens all creatures within 10 feet of you if they fail a wisdom save, and bolsters your allies. This effect lasts until the end of your next turn, and you can only do it once per short or long rest.Bonus action.<br/>
+    </description>
+    <sheet display="false"/>
+    <setters>
+      <set name="height" modifier="2d8">6'0"</set>
+      <set name="weight" modifier="2d6">200 lb.</set>
+    </setters>
+    <rules>
+      <stat name="constitution" value="2"/>
+      <stat name="strength" value="1"/>
+      <stat name="innate speed" value="35" bonus="base"/>
+      <grant type="Vision" id="ID_VISION_DARKVISION" />
+      <grant type="Size" id="ID_SIZE_MEDIUM" />
+      <grant type="Language" id="ID_LANGUAGE_COMMON" />
+      <select type="Language" name="ID_LANGUAGE_BEAST" />
+      <grant type="Racial Trait" id="ID_HMBRW_RACIAL_TRAIT_LEONIN_CLAWS" />
+    </rules>
+  </element>
+  
+   <element name="CLAWS" type="Racial Trait" source="Homebrew" id="ID_HMBRW_RACIAL_TRAIT_LEONI_CLAWS">
+    <description>
+			<p> 1d4 + Strength slashing damage unarmed strikes.</p>
+		</description>
+		<sheet display="false">
+			<description> 1d4 + Strength slashing damage unarmed strikes.</description>
+		</sheet>
+  </element>
+</elements>
